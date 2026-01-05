@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OTP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .opt-body {
+            display: block;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .opt-wrapper {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight: normal;
+            font-family: "Maven Pro", sans-serif;
+        }
+
+        .opt-table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px;
+            width: 640px;
+            max-width: 90%;
+            margin: 100px auto;
+            box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .opt-table tr {
+            background: #ffffff;
+        }
+
+        .opt-table td,
+        .opt-table th {
+            border: 0px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .opt-table tr td {
+            padding: 0px 40px;
+            box-sizing: border-box;
+        }
+
+        .opt-margin {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            height: 40px;
+            padding-bottom: 0px;
+            box-sizing: border-box;
+        }
+
+        .opt-table h1 {
+            font-size: 33px;
+            float: left;
+            width: 100%;
+            margin: 0px 0px 20px 0px !important;
+            padding: 0px;
+        }
+
+        .opt-table p {
+            float: left;
+            width: 100%;
+            font-size: 16px;
+            margin: 0px 0px 10px 0px !important;
+            line-height: 1.8;
+        }
+
+        .opt-table img,
+        .opt-table a img {
+            display: block;
+            max-width: 50%;
+            margin-bottom: 20px;
+            border: 0px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .opt-divider {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px 0px;
+            border-top: 2px solid #f2f2fd;
+        }
+
+        .otp-code {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 15px 40px;
+            margin: 20px 0px;
+            border: 2px dashed #FC6736;
+            background: #0C2D57;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 23px;
+        }
+
+        .otp-digit {
+            border: 1px dashed #FC6736;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            margin: 10px auto;
+            font-size: 30px;
+        }
+
+        .footer-text {
+            color: #706d6b;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+
+<body class="opt-body">
+<div class="opt-wrapper">
+    <table class="opt-table">
+        <tbody>
+        <tr>
+            <td class="opt-td" colspan="10">
+                <div class="opt-margin"></div>
+                <center>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/2560px-Spring_Framework_Logo_2018.svg.png"
+                         alt="Image" />
+                    <h1>Expense Tracking Application</h1>
+                    <p>Before you sign in, we need to verify your identity. Enter the following code on the
+                        sign-in page.</p>
+                </center>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="opt-td" colspan="10">
+                <center>
+                    <div class="otp-code">
+                        <div class="otp-digit">
+                            <span th:text="${otpCode}"></span>
+                        </div>
+                    </div>
+                </center>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="opt-td" colspan="10">
+                <center>
+                    <p>Welcome to the Expense Tracking Application. Here, you can monitor your expenses and
+                        manage your budget effectively.</p>
+                </center>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="opt-td" colspan="10">
+                <div class="opt-divider"></div>
+                <div class="footer-text">
+                    <center>
+                        <span> © 2024 KSHRD SR G3 </span>
+                    </center>
+                </div>
+                <div class="opt-margin"></div>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
